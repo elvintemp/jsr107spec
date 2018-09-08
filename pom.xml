@@ -30,13 +30,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-   <distributionManagement>
-      <snapshotRepository>
-         <id>nexus-snapshots</id>
-         <url>http://192.168.33.10:8081/nexus/content/repositories/snapshots</url>
-      </snapshotRepository>
-    </distributionManagement>
-
     <dependencies>
 
         <!--This is only needed if you are using a CDI based implementation of the annotations support.
@@ -273,16 +266,10 @@
         <!--
         The server id here defined must also appear in ~/.m2/settings.xml with username
         -->
-        <repository>
-            <id>sourceforge-releases</id>
-            <name>Sourceforge Release Repository</name>
-            <url>http://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-        </repository>
         <snapshotRepository>
-            <id>sourceforge-snapshots</id>
-            <name>Sourceforge Snapshot Repository</name>
-            <url>http://oss.sonatype.org/content/repositories/sourceforge-snapshots</url>
-        </snapshotRepository>
+ 	     <id>nexus-snapshots</id>
+  	    <url>http://192.168.33.10:8081/nexus/content/repositories/snapshots</url>
+   	</snapshotRepository>
     </distributionManagement>
 
     <reporting>
